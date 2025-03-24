@@ -1,6 +1,8 @@
+import java.util.Locale;
+import java.util.Scanner;
 
 public class Vestuario {
-
+    Scanner scanner = new Scanner(System.in).useLocale(Locale.US);
     Estoque estoque = new Estoque();
 
     public void TamanhodoUser(String Tam) {
@@ -13,8 +15,17 @@ public class Vestuario {
             case "G": {
                 for (int G = 0; G <= estoque.EstoqueTG().length; G++) {
                     System.out.println("O estoque de G é " + estoque.EstoqueTG()[G]);
+                    int eG = estoque.EstoqueTG().length;
+                    if (G == eG) {
+                        break;
+                    }
+
                 }
 
+                System.out.println("Qual roupa deseja ?");
+                String roupaSelecionada = scanner.next();
+
+                roupaSelecionada(roupaSelecionada);
                 break;
             }
             case "M": {
@@ -37,5 +48,18 @@ public class Vestuario {
             }
 
         }
+        scanner.close();
     }
+
+    private void roupaSelecionada(String roupa) {
+
+        for (int G = 0; G < estoque.EstoqueTG().length; G++) {
+
+            if (roupa.equals(estoque.EstoqueTG()[G])) {
+
+                System.out.println("A roupa selecionada  é ? " + estoque.EstoqueTG()[G]);
+            }
+        }
+    }
+
 }
