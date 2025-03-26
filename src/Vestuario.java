@@ -13,7 +13,7 @@ public class Vestuario {
 
         switch (Tamanho) {
             case "G": {
-                for (int G = 0; G <= estoque.EstoqueTG().length; G++) {
+                for (int G = 0; G < estoque.EstoqueTG().length; G++) {
                     System.out.println("O estoque de G é " + estoque.EstoqueTG()[G]);
 
                 }
@@ -49,12 +49,17 @@ public class Vestuario {
 
     private void roupaSelecionada(String roupa) {
 
-        for (int G = 0; G < estoque.EstoqueTG().length; G++) {
 
-            if (roupa.equals(estoque.EstoqueTG()[G])) {
+for (String r : estoque.EstoqueTM()){
+    if (roupa.equals(r)) {
 
-                System.out.println("A roupa selecionada  é ? " + estoque.EstoqueTG()[G]);
-            }
+        System.out.println("A roupa selecionada  é ? " + r);
+
+    }else {
+        System.out.println("Roupa não disponivel");
+        break;
+    }
+
         }
     }
 
