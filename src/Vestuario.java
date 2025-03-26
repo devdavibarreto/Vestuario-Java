@@ -15,10 +15,6 @@ public class Vestuario {
             case "G": {
                 for (int G = 0; G <= estoque.EstoqueTG().length; G++) {
                     System.out.println("O estoque de G é " + estoque.EstoqueTG()[G]);
-                    int eG = estoque.EstoqueTG().length;
-                    if (G == eG) {
-                        break;
-                    }
 
                 }
 
