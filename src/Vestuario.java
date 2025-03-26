@@ -50,7 +50,9 @@ public class Vestuario {
     private void roupaSelecionada(String roupa) {
 
 
-for (String r : estoque.EstoqueTM()){
+for (String r : estoque.EstoqueTG()){
+
+    System.out.println(r);
     if (roupa.equals(r)) {
 
         System.out.println("A roupa selecionada  é ? " + r);
